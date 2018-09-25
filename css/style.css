@@ -1,0 +1,85 @@
+/*Mobile First*/
+/* GERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Indie Flower', Arial, Helvetica, sans-serif;
+  font-size: 65%;
+  background-image: linear-gradient(to right, #d8c5f8, #a7c4f7);
+}
+
+.wrapper{
+  
+  margin: 15% 15%;
+}
+
+/* FORM */
+
+.list-composer{
+  position: relative;
+  background-color: #ffffff;
+  padding: 1px 0px;
+}
+
+.list-composer__input{
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #ffffff;
+  min-height: 40px;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+}
+
+hr {
+  border-color: #eaeaea;
+  color: #eaeaea;
+  border-width: 1px;
+}
+
+.list-composer__form-head {
+  text-align: center;
+}
+
+.list-composer__button {   
+  border: 0;
+  padding: 6px 10px;
+  margin-top: 10px;
+  width: 212px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #b07ff1;
+  font-family: 'Indie Flower', Arial, Helvetica, sans-serif;
+  font-size:  14px;
+  font-weight: lighter;
+  color: #ffffff;
+}
+
+.list-composer__button:hover{
+  background-color: #e6ecf0;
+  transition: 0.3s;
+}
+
+.list-timeline__box{
+  display: flex;
+  background-color: #ffffff;
+  margin: 1px 0;
+  padding: 1px 1px 1px 5px;
+  font-size: 15px;
+}
+
+.list-timeline__delete-button{
+  position: fixed;
+  display: flex;
+  color: #757575;
+  font-size: 13px;
+  border: 0;
+  background: 0 0;
+  cursor: pointer;
+  padding: 1px 1px 1px 50px;
+}
