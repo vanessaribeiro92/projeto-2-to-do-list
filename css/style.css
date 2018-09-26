@@ -1,85 +1,105 @@
-/*Mobile First*/
-/* GERAL */
 
-* {
-  box-sizing: border-box;
+*{
+    box-sizing: border-box;
 }
 
-body {
-  font-family: 'Indie Flower', Arial, Helvetica, sans-serif;
-  font-size: 65%;
-  background-image: linear-gradient(to right, #d8c5f8, #a7c4f7);
+body{
+    font-family: 'Indie Flower', Arial, Helvetica, sans-serif; 
+    font-size: 65%;
+    background-image: linear-gradient(to right, #d8c5f8, #a7c4f7);
+    
 }
 
 .wrapper{
-  
-  margin: 15% 15%;
+    
+    margin: 15% 15%;
 }
 
-/* FORM */
+.list-composer__form-head{
+    text-align: center;
+}
 
 .list-composer{
-  position: relative;
-  background-color: #ffffff;
-  padding: 1px 0px;
+    position: relative;
+    background-color: white;
+    padding: 1px 0px;
 }
 
 .list-composer__input{
-  width: 100%;
-  border-radius: 2px;
-  border: 1px solid #ffffff;
-  min-height: 40px;
-  padding: 10px;
-  font-size: 14px;
-  resize: none;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #ffffff;
+    min-height: 40px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+    background-color: #ffffff;
 }
 
-hr {
-  border-color: #eaeaea;
-  color: #eaeaea;
-  border-width: 1px;
+hr{
+    color: #eaeaea;
+    border-color: #eaeaea;
+    border-width: 1px;
+
 }
 
-.list-composer__form-head {
-  text-align: center;
-}
-
-.list-composer__button {   
-  border: 0;
-  padding: 6px 10px;
-  margin-top: 10px;
-  width: 212px;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  background-color: #b07ff1;
-  font-family: 'Indie Flower', Arial, Helvetica, sans-serif;
-  font-size:  14px;
-  font-weight: lighter;
-  color: #ffffff;
-}
-
-.list-composer__button:hover{
-  background-color: #e6ecf0;
-  transition: 0.3s;
+.list-composer__button{   
+    border: 0;
+    padding: 6px 10px;
+    margin-top: 10px;
+    width: 212px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Indie Flower', Arial, Helvetica, sans-serif;
+    background-color: #b07ff1;
+    font-size: 14px;
+    font-weight: lighter;
+    color: #ffff;
 }
 
 .list-timeline__box{
-  display: flex;
-  background-color: #ffffff;
-  margin: 1px 0;
-  padding: 1px 1px 1px 5px;
-  font-size: 15px;
+    background-color: #ffffff;
+    margin: 1.3px 0px;
+    padding: 1px 1px 5px;
+    font-size: 15px;
+    display: flex;
+    position: relative;
+
+}
+
+.list-composer__button:hover{
+    background-color: #e6ecf0;
+    transition: 0.3s;
 }
 
 .list-timeline__delete-button{
-  position: fixed;
-  display: flex;
-  color: #757575;
-  font-size: 13px;
-  border: 0;
-  background: 0 0;
-  cursor: pointer;
-  padding: 1px 1px 1px 50px;
+    color: #757575;
+    font-size: 13px;
+    border: 0;
+    background: 0 0;
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    left: 183px;
 }
+
+.list-timeline__p{
+    color: black;
+    padding: 1px 5px;
+    text-decoration: none;
+}
+
+.list-timeline__p-check{
+    text-decoration: line-through;
+    color:gray;
+    padding: 1px 5px;
+}
+
+.list-timeline__all-done{
+    font-size: 13px;
+    cursor: pointer;
+    padding: 1px 5px;
+}
+

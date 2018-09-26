@@ -1,40 +1,76 @@
-const inputList = document.getElementById("listComposerInput")
-const buttonCreateList = document.querySelector(".list-composer__button")
-const listTimeline = document.querySelector(".list-timeline")
 
-buttonCreateList.addEventListener("click", function(e){
-  e.preventDefault();
+const inputList = document.getElementById("listComposerInput");
+const buttonCreateList = document.querySelector(".list-composer__button");
+const listTimeline = document.querySelector(".list-timeline");
 
-  if(inputList.value === undefined || inputList.value === null || inputList.value === "" || inputList.value === " "){
-    return false;
-  }
 
-  const buttonDelete = document.createElement("div");
-  buttonDelete.className = "list-timeline__box";
-  buttonDelete.innerHTML = `<button class="list-timeline__delete-button button">X</button>`
+buttonCreateList.addEventListener("click", function (e) {
+    e.preventDefault();
 
-  const div = document.createElement("div")
-  div.className = "list-timeline__box";
+    if (inputList.value === undefined || inputList.value === null || inputList.value === "" || inputList.value === " ") {
+        return false;
+    }
 
- 
-  const newListP = document.createElement("p");
-  newListP.className = "list-timeline__list";
-  newListP.innerHTML = inputList.value;
+    //div q abraça tdo mundo
+    const div = document.createElement("div");
+    div.className = "list-timeline__box"
 
- 
-  div.appendChild(newListP)
-  div.appendChild(buttonDelete)
+    //cria um novo elemento pra lista
+    const newListP = document.createElement("p");
+    newListP.className = "list-timeline__p";
+    //passei o conteúdo do input pro paragrafo  
+    newListP.innerHTML = inputList.value;
 
-  listTimeline.insertBefore(div, listTimeline.childNodes[0]);
+    const buttonDel = document.createElement("div");
+    buttonDel.className = "tweets-timeline__del";
+    buttonDel.innerHTML = `<button class="list-timeline__delete-button button">X</button>`
 
-  inputList.value = "";
+    div.appendChild(newListP);
+    div.appendChild(buttonDel);
 
-  const botaoExcluir = document.querySelector(".list-timeline__delete-button");
+    listTimeline.insertBefore(div, listTimeline.childNodes[0]);
 
-  botaoExcluir.addEventListener("click", function(evento){
-      evento.preventDefault();
-      div.remove();
-     
-  })
+    inputList.value = "";
+    
+
+    const botaoExcluir = document.querySelector(".list-timeline__delete-button");
+
+    botaoExcluir.addEventListener("click", function (evento) {
+        evento.preventDefault();
+        div.remove();
+    })
+
+    const taskOk = document.querySelector(".list-timeline__p");
+
+    taskOk.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        
+        if(this.className === "list-timeline__p"){
+            this.className = "list-timeline__p-check"
+        }else{
+            this.className = "list-timeline__p"
+        }
+    
+    })
+       
+    const buttonAllDone = document.querySelector(".list-timeline__all-done");
+    const buttonAllDelete = document.querySelector(".list-timeline__all-del");
+
+    buttonAllDone.addEventListener("click", function(e){
+        e.preventDefault();
+        if(taskOk.classList.contains("list-timeline__p-check")){
+            taskOk.classList.remove("list-timeline__p");
+        } else {
+            taskOk.classList.add("list-timeline__p-check");
+        }
+    })
+
+
+    buttonAllDelete.addEventListener("click", function(e){
+        e.preventDefault();
+        if(listTimeline.classList.contains("list-timeline")){
+            listTimeline.remove();
+        }
+    })
 
 })
