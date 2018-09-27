@@ -22,9 +22,9 @@ Tem como objetivo exercitar os conhecimento adquiridos em HTML, CSS, Javascript 
     - Marcar todos os itens como feito OK
     - Limpar lista, excluir todos os itens da lista OK
 - **Fase 4**	
-    - Não permitir que um item seja adicionado se só tiver espaços e nenhum texto no input 
+    - Não permitir que um item seja adicionado se só tiver espaços e nenhum texto no input OK
 - **Fase 5**	
-    - Permitir drag and drop pra reorganizar a lista
+    - Permitir drag and drop pra reorganizar a lista 
 
 --------------
 
