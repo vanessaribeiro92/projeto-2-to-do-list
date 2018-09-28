@@ -1,4 +1,4 @@
-
+/*  MOBILE FIRST - 320px */
 *{
     box-sizing: border-box;
 }
@@ -21,7 +21,7 @@ body{
 
 .list-composer{
     position: relative;
-    background-color: white;
+    background-color: #ffffff;
     padding: 1px 0px;
 }
 
@@ -46,7 +46,6 @@ hr{
 .list-composer__button{   
     border: 0;
     padding: 6px 10px;
-    margin-top: 10px;
     width: 212px;
     font-weight: bold;
     font-size: 16px;
@@ -66,7 +65,6 @@ hr{
     font-size: 15px;
     display: flex;
     position: relative;
-
 }
 
 .list-composer__button:hover{
@@ -75,31 +73,242 @@ hr{
 }
 
 .list-timeline__delete-button{
-    color: #757575;
-    font-size: 13px;
     border: 0;
     background: 0 0;
     cursor: pointer;
     position: absolute;
-    top: 24px;
+    top: 18px;
     left: 183px;
+}
+
+.fa-trash-alt:before {
+    content: "\f2ed";
+    color: blue;
+    font-size: 16px;
 }
 
 .list-timeline__p{
     color: black;
     padding: 1px 5px;
     text-decoration: none;
+    letter-spacing: 2px;
 }
 
 .list-timeline__p-check{
     text-decoration: line-through;
     color:gray;
     padding: 1px 5px;
+    letter-spacing: 2px;
 }
 
-.list-timeline__all-done{
+.list-timeline__all-done {
+    color: black;
     font-size: 13px;
     cursor: pointer;
-    padding: 1px 5px;
+    background-color: lightgreen;
+    font-weight: bold;
+    border-color: darkcyan;
+    padding: 5px 10px;
+    margin: 5px 15px 2px 18px;
 }
 
+.list-timeline__all-del {
+    color: black;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: indianred;
+    padding: 5px 10px;
+    border-color: darkred;
+    font-weight: bold;
+}
+
+/*  TABLET - 768px */
+
+@media (min-width:768px) {
+
+    .wrapper{
+     margin: 10% 25%;
+    width: 50%;
+    }
+
+    .list-composer__button{ 
+     width: 376px;
+     padding: 9px 10px;
+    font-size: 16px;
+    }
+
+    .list-composer__input{
+     padding: 35px;
+    font-size: 16px;
+    }
+
+    .list-timeline__all-done{
+     padding: 5px 35px;
+    margin: 5px 74px 2px 18px;
+    }
+
+    .list-timeline__all-del{
+     padding: 5px 35px;
+    }
+
+    .list-composer__form-head h2{
+     letter-spacing: 3px;
+     font-size: 17px;
+    }
+
+    .list-timeline__p{
+    font-size: 17px;
+    letter-spacing: 2px;
+    }
+
+    .list-timeline__p-check{
+    letter-spacing: 2px;
+    font-size: 17px;
+    }
+
+    .list-timeline__delete-button{
+    top: 20px;
+    left: 330px;
+    }
+    .fa-trash-alt:before {
+    content: "\f2ed";
+    color: blue;
+    font-size: 25px;
+    }
+}
+
+/* DESKTOP - 1024px */
+
+@media (min-width: 1024px){
+
+    .wrapper{
+    margin: 10% 25%;
+    width: 50%;
+    }
+    
+    .list-composer__button{ 
+    width: 504px;
+    padding: 9px 10px;
+    font-size: 16px;
+    }
+    
+    .list-composer__input{
+    padding: 50px;
+    font-size: 20px;
+    }
+    
+    .list-timeline__all-done{
+    padding: 5px 55px;
+    margin: 5px 124px 2px 18px;
+    }
+    
+    .list-timeline__all-del{
+    padding: 5px 55px;
+    }
+    
+    .list-composer__form-head h2{
+    letter-spacing: 3px;
+    }
+    
+    .list-timeline__p{
+    font-size: 20px;
+    letter-spacing: 2px;
+    }
+
+    .list-timeline__p-check{
+    font-size: 20px;
+    letter-spacing: 2px;
+    }
+    
+    .list-timeline__delete-button{
+    top: 20px;
+    left: 443px;
+    }
+    .fa-trash-alt:before {
+    content: "\f2ed";
+    color: blue;
+    font-size: 32px;
+    }
+}
+
+/* LAPTOP L - 1440px */
+
+@media (min-width: 1440px){
+
+    .wrapper{
+    margin: 10% 25%;
+    width: 50%;
+    }
+    
+    .list-composer__button{ 
+    width: 712px;
+    font-size: 20px;
+    }
+    
+    .list-composer__input{
+    padding: 50px;
+    font-size: 23px;
+    }
+    
+    .list-timeline__all-done{
+    padding: 10px 65px;
+    margin: 5px 250px 2px 18px;
+    font-size: 18px;
+    }
+    
+    .list-timeline__all-del{
+    padding: 10px 65px;
+    font-size: 18px;
+    }
+    
+    .list-composer__form-head h2{
+    letter-spacing: 8px;
+    font-size: 24px;
+    }
+    
+    .list-timeline__p{
+    font-size: 26px;
+    letter-spacing: 2px;
+    }
+
+    .list-timeline__p-check{
+    font-size: 26px;
+    letter-spacing: 2px;
+    }
+    
+    .list-timeline__delete-button{
+    top: 29px;
+    left: 650px;
+    }
+    .fa-trash-alt:before {
+    content: "\f2ed";
+    color: blue;
+    font-size: 32px;
+    }
+}
+
+/*Notebook-Lenovo 1366px*/
+@media(min-width: 1366px){
+
+    .list-composer__button{ 
+    width: 669px;
+    font-size: 20px;
+    }
+        
+    .list-timeline__all-done{
+    padding: 10px 65px;
+    margin: 5px 208px 2px 18px;
+    font-size: 18px;
+    }
+
+    .list-timeline__all-del{
+        padding: 10px 65px;
+        font-size: 18px;
+     }
+       
+    .list-timeline__delete-button{
+    top: 29px;
+    left: 605px;
+    }
+
+}
